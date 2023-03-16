@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] arg){
+    public static void main(String[] arg) throws Exception {
 
         Scanner input = new Scanner(System.in);
 
@@ -38,10 +38,22 @@ public class Main {
 
         }
 
+        Collections.sort(desires);
+
         System.out.println("La tua lista dei desideri:");
         for (String wish : desires) {
             System.out.println(wish);
         }
+
+        System.out.println("Inserisci il tuo nome");
+        String name = input.nextLine();
+
+        System.out.println("Inserisci il tuo indirizzo");
+        String address = input.nextLine();
+
+        ChristmasLetter newLetter = new ChristmasLetter(name, address, desires);
+
+        newLetter.send();
 
     }
 
