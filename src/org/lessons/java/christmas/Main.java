@@ -51,9 +51,15 @@ public class Main {
         System.out.println("Inserisci il tuo indirizzo");
         String address = input.nextLine();
 
+        input.close();
+
         ChristmasLetter newLetter = new ChristmasLetter(name, address, desires);
 
         newLetter.send();
+
+
+
+
 
     }
 
