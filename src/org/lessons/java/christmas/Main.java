@@ -55,11 +55,11 @@ public class Main {
 
         ChristmasLetter newLetter = new ChristmasLetter(name, address, desires);
 
-        newLetter.send();
-
-
-
-
+        try {
+            newLetter.send();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
     }
 
